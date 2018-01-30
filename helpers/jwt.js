@@ -35,7 +35,6 @@ function init(opts) {
 
 function checkAuth(req, res, next) {
   try {
-    console.log(req);
     const token = getTokenFromRequest(req);
     jsonwebtoken.verify(token, config.JWT_SECRET);
     return next();
