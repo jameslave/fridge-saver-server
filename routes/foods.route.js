@@ -7,5 +7,6 @@ const router = express.Router();
 router.use(jwt.checkAuth);
 
 router.get('/', foodsController.getFoods);
+router.get('/search', foodsController.searchAllFoods);
 
 module.exports = router;
